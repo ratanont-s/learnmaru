@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LEARNMARU</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.0/jarallax.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="./assets/css/LMHOME-style.min.css">
 </head>
 
 <body>
     <!-- Start Header -->
-    <header>
+    <header id="header">
         <div class="header-top">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        Tel: <a href="tel:+66123456789">0123456789</a>
+                        โทร: <a href="tel:+66962456963">096-245-6963</a>
                     </div>
                     <div class="col-auto">
-                        <ul class="list-inline">
+                        <ul class="list-inline mb-0">
                             <li class="list-inline-item">
                                 <a href="#">Login</a>
                             </li>
@@ -36,38 +39,39 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/logo.svg" alt="Learnmaru logo">
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ค้นหาผู้สอน</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">ค้นหาห้องเรียน</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">ร่วมสอนกับเรา</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">คำถามพบบ่อย</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">เกี่ยวกับเรา</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                                TH
+                                ไทย
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">TH</a>
-                                <a class="dropdown-item" href="#">EN</a>
-                                <a class="dropdown-item" href="#">JP</a>
+                                <a class="dropdown-item" href="#">ไทย</a>
+                                <a class="dropdown-item" href="#">English</a>
                             </div>
                         </li>
                     </ul>
@@ -80,14 +84,13 @@
     <!-- Start Main -->
     <main>
         <!-- Start Section Banner -->
-        <section id="banner" style="background-image: url('./assets/img/students-1807505_1280.jpg');">
+        <section id="banner" class="jarallax" style="background-image: url('./assets/img/students-1807505_1280.jpg');">
             <div class="container">
-                <h1>Heading</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem aut, praesentium quam consectetur
-                    inventore nulla non voluptas temporibus eum magnam rerum obcaecati magni animi! A nisi dolorem fuga
-                    neque delectus!</p>
-                <a href="#" class="btn btn-outline-dark">Button <i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="btn btn-outline-dark">Button <i class="fas fa-arrow-right"></i></a>
+                <h1>มีครูอุ่นใจ พกไปได้ทุกที่</h1>
+                <p>ปลดล็อคการศึกษา เรียนในสิ่งที่ใช่ ในเวลาที่ต้องการ พร้อมทีมคณาจารย์ที่เคียงข้างคุณเสมอ</p>
+                <a href="#" class="btn btn-outline-light btn-lg mr-4">เริ่มต้นใช้งาน <i
+                        class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-outline-light btn-lg">อ่านเพิ่มเติม <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
         <!-- End Section Banner -->
@@ -96,77 +99,55 @@
             <div class="container">
                 <!-- Start Form Search -->
                 <form action="/" class="form-search">
-                    <h5>Heading</h5>
+                    <h5 class="text-center">ค้นหาสิ่งที่คุณต้องการ</h5>
                     <div class="form-row">
                         <div class="col-sm-6 col-lg form-group">
-                            <select class="form-control">
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-6 col-lg form-group">
-                            <select class="form-control">
-                                <option value="">Option</option>
+                            <select class="selectpicker" title="ค้นหาครู">
                                 <option value="">Option</option>
                                 <option value="">Option</option>
                             </select>
                         </div>
                         <div class="col-sm-6 col-lg form-group">
-                            <select class="form-control">
-                                <option value="">Option</option>
+                            <select class="selectpicker" title="วิชาทั้งหมด">
                                 <option value="">Option</option>
                                 <option value="">Option</option>
                             </select>
                         </div>
                         <div class="col-sm-6 col-lg form-group">
-                            <select class="form-control">
+                            <select class="selectpicker" title="ทุกระดับ">
                                 <option value="">Option</option>
+                                <option value="">Option</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 col-lg form-group">
+                            <select class="selectpicker" title="ครูยอดเยี่ยม">
                                 <option value="">Option</option>
                                 <option value="">Option</option>
                             </select>
                         </div>
                         <div class="col-lg form-group">
-                            <button type="submit" class="btn btn-secondary btn-block">Search</button>
+                            <button type="submit" class="btn btn-secondary btn-block">ค้นหา</button>
                         </div>
                     </div>
                 </form>
                 <!-- End Form Search -->
                 <div class="row">
                     <div class="col-lg">
-                        <h5>Heading <span class="text-primary">subheading</span></h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim tempore assumenda
-                            voluptates
-                            laborum iusto sapiente ipsa excepturi, tenetur itaque pariatur similique dolore dolorem!
-                            Possimus
-                            dolores tempore iure voluptate quasi.</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia eum quibusdam voluptas
-                            recusandae
-                            eveniet et harum, amet voluptates cumque repellendus aliquid. Deserunt consectetur maiores
-                            unde,
-                            fugit perferendis amet quidem ut.
-                            Beatae, optio! Perspiciatis tempore officiis doloremque assumenda rem asperiores vel? Fuga
-                            quasi
-                            nobis optio. Molestias ipsa omnis provident sint inventore rem! Laborum iure rem repellat
-                            ratione
-                            vero animi nemo vel?
-                            Quae aut beatae mollitia vitae illum? Enim fuga consectetur, delectus, blanditiis sint
-                            necessitatibus, magni architecto asperiores temporibus a perferendis animi saepe sequi
-                            dolore soluta
-                            incidunt. Iure cum maxime accusantium quaerat?
-                            Explicabo non, ea, mollitia illo maxime, nobis consectetur amet quaerat aliquid reiciendis
-                            nam?
-                            Minima beatae tenetur veniam aperiam, accusamus, quis ullam, et quisquam vero illo mollitia
-                            repellendus accusantium id hic.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci exercitationem
-                            fuga
-                            repellendus, quos dolorem molestias incidunt, tempora numquam tenetur a assumenda, eum
-                            repellat
-                            iusto itaque saepe. Ullam, dignissimos qui!</p>
+                        <h5 class="text-dark">สวัสดี เราคือ <span class="text-primary">Learnmaru!</span></h5>
+                        <p>Learnmaru คือ เว็บไซต์ที่ถูกออกแบบมาเพื่อช่วยให้
+                            การเรียนการสอนออนไลน์ "สด" ง่ายขึ้นโดยเฉพาะ</p>
+                        <p>จากทีมคณาจาร์ยมากประสบการณ์สอน ประกอบกับ
+                            การฟังความต้องการและวิเคราะห์สิ่งที่สามารถช่วยเติม
+                            เต็มความสามารถของผู้เรียน Learnmaru จึงเกิดขึ้น
+                            เพื่อแก้ไขและเติมเต็มความต้องการทั้งของผู้สอนและผู้เรียน
+                            เพื่อให้ผลลัพธ์ทางการศึกษาประสบผลสำเร็จสูงสุด</p>
+                        <p>Learnmaru พร้อมรับฟังทุกคำตอบรับ
+                            เพื่อพัฒนาเว็บไซต์ให้ตอบสนองความต้องการของทุกคน
+                            ต่อจากนี้และตลอดไป</p>
                     </div>
                     <div class="col-lg">
                         <p>
-                            <img data-src="holder.js/600x400?auto=yes" alt="" class="img-fluid">
+                            <img src="./assets/img/img-about.jpg" alt="" class="img-fluid">
                         </p>
                     </div>
                 </div>
@@ -176,61 +157,90 @@
         <!-- Start Section Classroom -->
         <section id="classroom">
             <div class="container">
-                <h5 class="text-center">Heading<span class="text-primary">subheading</span></h5>
+                <h4 class="text-center text-dark">ห้องเรียนใหม่<span class="text-primary">ใกล้เริ่ม</span></h4>
                 <div class="classroom-slider">
                     <div class="classroom-slider-item">
                         <div class="form-row">
                             <div class="col-lg-5">
                                 <div class="card card-classroom">
-                                    <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
+                                    <img src="./assets/img/classroom-1.jpg" alt="" class="card-img">
                                     <div class="card-body">
-                                        <p class="card-text">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum
-                                            tenetur
-                                            atque natus esse iure ipsam eveniet enim repudiandae non asperiores rem,
-                                            alias
-                                            aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                        </p>
+                                        <div class="card-detail">
+                                            <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น</h5>
+                                            <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                            <p class="card-text">
+                                                ภาษาญี่ปุ่น ชั้นต้น
+                                            </p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="card-time">
+                                                <i class="far fa-clock fa-3x"></i>
+                                                <div class="ml-2">
+                                                    <div>12/12/2020-20/12/2020</div>
+                                                    <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="card-link">ลงทะเบียน</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
-                                <div class="card card-classroom">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg">
-                                            <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
-                                        </div>
-                                        <div class="col-lg">
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                    voluptatum
-                                                    tenetur
-                                                    atque natus esse iure ipsam eveniet enim repudiandae non asperiores
-                                                    rem,
-                                                    alias
-                                                    aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                                </p>
+                                <div class="d-flex flex-column h-100">
+                                    <div class="card card-classroom card-classroom-h">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-lg">
+                                                <img src="./assets/img/classroom-2.jpg" alt="" class="card-img">
+                                            </div>
+                                            <div class="col-lg">
+                                                <div class="card-body">
+                                                    <div class="card-detail">
+                                                        <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น เริ่มตั้งแต่ 0 ถึง
+                                                            พูดได้ทั่วไป</h5>
+                                                        <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                                        <p class="card-text">
+                                                            ภาษาญี่ปุ่น ชั้นต้น
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="card-time">
+                                                            <i class="far fa-clock fa-3x"></i>
+                                                            <div class="ml-2">
+                                                                <div>12/12/2020-20/12/2020</div>
+                                                                <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="card-link">ลงทะเบียน</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card card-classroom">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg">
-                                            <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
-                                        </div>
-                                        <div class="col-lg">
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                    voluptatum
-                                                    tenetur
-                                                    atque natus esse iure ipsam eveniet enim repudiandae non asperiores
-                                                    rem,
-                                                    alias
-                                                    aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                                </p>
+                                    <div class="card card-classroom card-classroom-h">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-lg">
+                                                <img src="./assets/img/classroom-3.jpg" alt="" class="card-img">
+                                            </div>
+                                            <div class="col-lg">
+                                                <div class="card-body">
+                                                    <div class="card-detail">
+                                                        <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น</h5>
+                                                        <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                                        <p class="card-text">
+                                                            ภาษาญี่ปุ่น ชั้นต้น
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="card-time">
+                                                            <i class="far fa-clock fa-3x"></i>
+                                                            <div class="ml-2">
+                                                                <div>12/12/2020-20/12/2020</div>
+                                                                <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="card-link">ลงทะเบียน</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -242,55 +252,84 @@
                         <div class="form-row">
                             <div class="col-lg-5">
                                 <div class="card card-classroom">
-                                    <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img-top">
+                                    <img src="./assets/img/classroom-1.jpg" alt="" class="card-img">
                                     <div class="card-body">
-                                        <p class="card-text">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum
-                                            tenetur
-                                            atque natus esse iure ipsam eveniet enim repudiandae non asperiores rem,
-                                            alias
-                                            aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                        </p>
+                                        <div class="card-detail">
+                                            <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น</h5>
+                                            <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                            <p class="card-text">
+                                                ภาษาญี่ปุ่น ชั้นต้น
+                                            </p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="card-time">
+                                                <i class="far fa-clock fa-3x"></i>
+                                                <div class="ml-2">
+                                                    <div>12/12/2020-20/12/2020</div>
+                                                    <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="card-link">ลงทะเบียน</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
-                                <div class="card card-classroom">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg">
-                                            <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img-top">
-                                        </div>
-                                        <div class="col-lg">
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                    voluptatum
-                                                    tenetur
-                                                    atque natus esse iure ipsam eveniet enim repudiandae non asperiores
-                                                    rem,
-                                                    alias
-                                                    aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                                </p>
+                                <div class="d-flex flex-column h-100">
+                                    <div class="card card-classroom card-classroom-h">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-lg">
+                                                <img src="./assets/img/classroom-2.jpg" alt="" class="card-img">
+                                            </div>
+                                            <div class="col-lg">
+                                                <div class="card-body">
+                                                    <div class="card-detail">
+                                                        <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น เริ่มตั้งแต่ 0 ถึง
+                                                            พูดได้ทั่วไป</h5>
+                                                        <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                                        <p class="card-text">
+                                                            ภาษาญี่ปุ่น ชั้นต้น
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="card-time">
+                                                            <i class="far fa-clock fa-3x"></i>
+                                                            <div class="ml-2">
+                                                                <div>12/12/2020-20/12/2020</div>
+                                                                <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="card-link">ลงทะเบียน</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card card-classroom">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg">
-                                            <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img-top">
-                                        </div>
-                                        <div class="col-lg">
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                    voluptatum
-                                                    tenetur
-                                                    atque natus esse iure ipsam eveniet enim repudiandae non asperiores
-                                                    rem,
-                                                    alias
-                                                    aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                                </p>
+                                    <div class="card card-classroom card-classroom-h">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-lg">
+                                                <img src="./assets/img/classroom-3.jpg" alt="" class="card-img">
+                                            </div>
+                                            <div class="col-lg">
+                                                <div class="card-body">
+                                                    <div class="card-detail">
+                                                        <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น</h5>
+                                                        <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                                        <p class="card-text">
+                                                            ภาษาญี่ปุ่น ชั้นต้น
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="card-time">
+                                                            <i class="far fa-clock fa-3x"></i>
+                                                            <div class="ml-2">
+                                                                <div>12/12/2020-20/12/2020</div>
+                                                                <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="card-link">ลงทะเบียน</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -302,55 +341,84 @@
                         <div class="form-row">
                             <div class="col-lg-5">
                                 <div class="card card-classroom">
-                                    <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img-top">
+                                    <img src="./assets/img/classroom-1.jpg" alt="" class="card-img">
                                     <div class="card-body">
-                                        <p class="card-text">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum
-                                            tenetur
-                                            atque natus esse iure ipsam eveniet enim repudiandae non asperiores rem,
-                                            alias
-                                            aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                        </p>
+                                        <div class="card-detail">
+                                            <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น</h5>
+                                            <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                            <p class="card-text">
+                                                ภาษาญี่ปุ่น ชั้นต้น
+                                            </p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="card-time">
+                                                <i class="far fa-clock fa-3x"></i>
+                                                <div class="ml-2">
+                                                    <div>12/12/2020-20/12/2020</div>
+                                                    <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="card-link">ลงทะเบียน</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
-                                <div class="card card-classroom">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg">
-                                            <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img-top">
-                                        </div>
-                                        <div class="col-lg">
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                    voluptatum
-                                                    tenetur
-                                                    atque natus esse iure ipsam eveniet enim repudiandae non asperiores
-                                                    rem,
-                                                    alias
-                                                    aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                                </p>
+                                <div class="d-flex flex-column h-100">
+                                    <div class="card card-classroom card-classroom-h">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-lg">
+                                                <img src="./assets/img/classroom-2.jpg" alt="" class="card-img">
+                                            </div>
+                                            <div class="col-lg">
+                                                <div class="card-body">
+                                                    <div class="card-detail">
+                                                        <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น เริ่มตั้งแต่ 0 ถึง
+                                                            พูดได้ทั่วไป</h5>
+                                                        <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                                        <p class="card-text">
+                                                            ภาษาญี่ปุ่น ชั้นต้น
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="card-time">
+                                                            <i class="far fa-clock fa-3x"></i>
+                                                            <div class="ml-2">
+                                                                <div>12/12/2020-20/12/2020</div>
+                                                                <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="card-link">ลงทะเบียน</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card card-classroom">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg">
-                                            <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img-top">
-                                        </div>
-                                        <div class="col-lg">
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                                                    voluptatum
-                                                    tenetur
-                                                    atque natus esse iure ipsam eveniet enim repudiandae non asperiores
-                                                    rem,
-                                                    alias
-                                                    aspernatur aliquid. Aperiam distinctio asperiores fugit rem.
-                                                </p>
+                                    <div class="card card-classroom card-classroom-h">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-lg">
+                                                <img src="./assets/img/classroom-3.jpg" alt="" class="card-img">
+                                            </div>
+                                            <div class="col-lg">
+                                                <div class="card-body">
+                                                    <div class="card-detail">
+                                                        <h5 class="card-title">ภาษาญี่ปุ่นชั้นต้น</h5>
+                                                        <h6 class="card-name">ครูกิ๊ฟ</h6>
+                                                        <p class="card-text">
+                                                            ภาษาญี่ปุ่น ชั้นต้น
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="card-time">
+                                                            <i class="far fa-clock fa-3x"></i>
+                                                            <div class="ml-2">
+                                                                <div>12/12/2020-20/12/2020</div>
+                                                                <div>จ.wฤ.อา. 10.00-12.00 น.</div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="card-link">ลงทะเบียน</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -363,54 +431,63 @@
         </section>
         <!-- End Section Classroom -->
         <!-- Start Section Feature -->
-        <section id="feature">
+        <section id="feature" class="jarallax" style="background-image: url('./assets/img/asian_4033335_640.png');">
             <div class="container">
                 <div class="row">
                     <div class="col-lg">
-                        <h5>Heading</h5>
-                        <ul>
+                        <h5>Learnmaru สบายใจได้!</h5>
+                        <ul class="list-checked">
                             <li>
-                                text
-                                <small class="d-block">subtext</small>
+                                เลือกครูเองได้
+                                <small class="d-block">ติดต่อผู้สอนที่ผ่านการคัดสรรแล้วได้ด้วยตนเอง
+                                    ไม่ถูกใจสามารถเปลี่ยนได้</small>
                             </li>
                             <li>
-                                text
-                                <small class="d-block">subtext</small>
+                                ตกลงค่าเรียนและเนื้อหาที่ต้องการได้
+                                <small class="d-block">ตอบโจทย์ทุกความต้องการ ไม่จำกัดเนื้อหาและรูปแบบของการสอน</small>
                             </li>
                             <li>
-                                text
-                                <small class="d-block">subtext</small>
+                                เรียนได้ทุกที่ ทุกเวลา
+                                <small class="d-block">เรียน Online "สด" ทุกคราส รองรับอุปกรณ์สื่อสารทุกระบบ
+                                    IOS Android และ Window </small>
                             </li>
                             <li>
-                                text
-                                <small class="d-block">subtext</small>
+                                ติดตามผลได้
+                                <small class="d-block">มีระบบการบ้านจากผู้สอน
+                                    ที่จะช่วยพัฒนาและแจ้งผลการเรียนของผู้เรียนได้โดยตรง</small>
                             </li>
                             <li>
-                                text
-                                <small class="d-block">subtext</small>
+                                ไม่หนักเครื่อง ความปลอดภัยสูง
+                                <small class="d-block">ใช้งานผ่านเว็บไซต์ ไม่ต้องโหลดโปรแกรมใดๆเพิ่มเติม
+                                    และไม่เรียกเก็บข้อมูลส่วนตัวใดๆที่นอกเหนือจากมาตรฐานความปลอดภัย</small>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg">
                         <form action="/" class="form-register">
-                            <h5 class="text-center">Heading</h5>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="placeholder">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="placeholder">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="placeholder">
-                            </div>
-                            <div class="form-group form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-secondary">Submit</button>
+                            <div class="form-register-body">
+                                <h4 class="text-center">สมัครใช้งานฟรี!</h4>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Email ของคุณ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control form-control-lg"
+                                        placeholder="รหัสเข้าใช้งาน">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control form-control-lg"
+                                        placeholder="รหัสเข้าใช้งานอีกครั้ง">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        อ่านเงื่อนไขการใช้งานแล้วและยอมรับ
+                                    </label>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit"
+                                        class="btn btn-secondary btn-lg text-primary">รับอีเมลยืนยัน</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -421,28 +498,38 @@
         <!-- Start Section Registration -->
         <section id="registration">
             <div class="container">
-                <div class="col-lg-4 offset-lg-8">
-                    <h5>Heading</h5>
-                    <ul>
-                        <li>
-                            text
-                            <small class="d-block">subtext</small>
-                        </li>
-                        <li>
-                            text
-                            <small class="d-block">subtext</small>
-                        </li>
-                        <li>
-                            text
-                            <small class="d-block">subtext</small>
-                        </li>
-                        <li>
-                            text
-                            <small class="d-block">subtext</small>
-                        </li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-outline-dark">Button</a>
+                <div class="row no-gutturs">
+                    <div class="col-lg-8">
+                        <img src="./assets/img/devices.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 class="text-dark">ใช้งานง่ายกว่าที่คิด!</h5>
+                        <ul class="list-checked">
+                            <li>
+                                สมัครใช้งานง่าย!
+                                <small class="d-block">แค่กรอกอีเมลและรหัส
+                                    แล้วยืนยันตัวตนผ่านอีเมลก็ใช้งานได้เลย!</small>
+                            </li>
+                            <li>
+                                สมัครเรียนง่าย!
+                                <small class="d-block">เพียงค้นหาห้องเรียนที่ต้องการ หรือคุยกับครูที่อยากเรียนด้ว
+                                    ก็สมัครเรียนได้เลย</small>
+                            </li>
+                            <li>
+                                ชำระเงินง่าย!
+                                <small class="d-block">ไม่ต้องใช้บัตรเครดิต รอการตรวจสอบลงทะเบียน 24 ชั่วโมง
+                                    เริ่มเรียนได้เลย!</small>
+                            </li>
+                            <li>
+                                เรียนในห้องง้ายง่าย!
+                                <small class="d-block">เรียนสดเห็นหน้า พูดคุยสอบถามครูได้ทันที พร้อมกระดานเขียนอิสระ
+                                    และฟังก์ชั่นมากมาย ที่จะทำให้คุณเรียนสะดวกเหมือนนัดเรียนนอก
+                                    สถานที่หรือยิ่งกว่า!</small>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-outline-dark">ศึกษาเพิ่มเติม</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -450,53 +537,71 @@
         <!-- End Section Registration -->
         <!-- Start Section Article -->
         <section id="article">
+            <div class="container">
+                <h5 class="text-center text-dark">บทความ<span class="text-primary">น่าสนใจ</span></h5>
+            </div>
             <div class="row no-gutters">
                 <div class="col-lg">
                     <a href="#" class="card card-article">
-                        <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
+                        <img src="./assets/img/article-1.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Heading</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">หัวข้อบทความ</h5>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-5">
                     <a href="#" class="card card-article">
-                        <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
+                        <img src="./assets/img/article-2.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Heading</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">จะสั้นจะยาวชื่อออกมา
+                                    จากตรงกลางให้หมด</h5>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg">
                     <a href="#" class="card card-article">
-                        <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
+                        <img src="./assets/img/article-3.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Heading</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">หัวข้อบทความ</h5>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <div class="w-100"></div>
                 <div class="col-lg">
                     <a href="#" class="card card-article">
-                        <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
+                        <img src="./assets/img/article-4.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Heading</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">จะสั้นจะยาวชื่อออกมา
+                                    จากตรงกลางให้หมด</h5>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-5">
                     <a href="#" class="card card-article">
-                        <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
+                        <img src="./assets/img/article-5.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Heading</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">หัวข้อบทความ</h5>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg">
                     <a href="#" class="card card-article">
-                        <img data-src="holder.js/600x400?auto=yes" alt="" class="card-img">
+                        <img src="./assets/img/article-6.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Heading</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">จะสั้นจะยาวชื่อออกมา
+                                    จากตรงกลางให้หมด</h5>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -506,40 +611,42 @@
         <!-- Start Section Guarantee -->
         <section id="guarantee">
             <div class="container">
-                <h1 class="text-primary text-center">Heading</h1>
+                <h4 class="text-primary text-center">ครูคัดสรรการันตี 3 ระดับ!</h4>
                 <div class="row">
                     <div class="col-lg">
-                        <a href="#" class="card card-guarantee">
-                            <p><img data-src="holder.js/250x250" alt="" class="img-fluid"></p>
-                            <h5 class="card-title">Heading</h5>
+                        <div class="card card-guarantee">
+                            <p><img src="./assets/img/comment.png" alt="" class="img-fluid"></p>
+                            <h5 class="card-title">ครูหน้าใหม่ไฟแรง</h5>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ratione recusandae
-                                impedit. Fugit iusto optio odit animi sint veniam. Nulla distinctio unde nemo ab et
-                                voluptates sequi nihil numquam impedit?
+                                คัดกรอกจากประวัติ
+                                เสริมความเชื่อมั่นด้วย
+                                คอมเม้นต์จากเพื่อนๆ
+                                นักเรียนด้วยกัน!
                             </p>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg">
-                        <a href="#" class="card card-guarantee">
-                            <p><img data-src="holder.js/250x250" alt="" class="img-fluid"></p>
-                            <h5 class="card-title">Heading</h5>
+                        <div class="card card-guarantee">
+                            <p><img src="./assets/img/verified.png" alt="" class="img-fluid"></p>
+                            <h5 class="card-title">ครูคุณภาพ</h5>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ratione recusandae
-                                impedit. Fugit iusto optio odit animi sint veniam. Nulla distinctio unde nemo ab et
-                                voluptates sequi nihil numquam impedit?
+                                การันตีจากการตรวจ
+                                สอบประวัติการศึกษา
+                                มั่นใจในมาตรฐานวิชาการ
                             </p>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg">
-                        <a href="#" class="card card-guarantee">
-                            <p><img data-src="holder.js/250x250" alt="" class="img-fluid"></p>
-                            <h5 class="card-title">Heading</h5>
+                        <div class="card card-guarantee">
+                            <p><img src="./assets/img/bestmedal.png" alt="" class="img-fluid"></p>
+                            <h5 class="card-title">ครูยอดเยี่ยม</h5>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ratione recusandae
-                                impedit. Fugit iusto optio odit animi sint veniam. Nulla distinctio unde nemo ab et
-                                voluptates sequi nihil numquam impedit?
+                                มั่นใจทุกทท่วงท่าการสอน
+                                และการถ่ายทอดวิชา
+                                จากเพื่อนๆที่พากันเท
+                                คะแนนให้!
                             </p>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -548,13 +655,13 @@
         <!-- Start Section Join us -->
         <section id="joinUs">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg">
-                        <h5>Heading</h5>
-                        <p class="mb-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h5>ร่วมสอนกับเรา</h5>
+                        <p class="mb-lg-0">Learnmaru ยินดีต้อนรับครูหน้าใหม่มากความสามารถเสมอ</p>
                     </div>
                     <div class="col-lg-auto">
-                        <a href="#" class="btn btn-light">Button</a>
+                        <a href="#" class="btn btn-light btn-lg text-primary px-5">สมัครเป็นครู</a>
                     </div>
                 </div>
             </div>
@@ -568,52 +675,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg">
-                    <h5>Heading</h5>
+                    <h5 class="mb-4">เรียนรู้เพิ่มเติม</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#">Link</a>
+                            <a href="#">สมัครเรียนให้ลูก</a>
                         </li>
                         <li>
-                            <a href="#">Link</a>
+                            <a href="#">เกี่ยวกับเรา</a>
                         </li>
                         <li>
-                            <a href="#">Link</a>
+                            <a href="#">คำถามพบบ่อย</a>
                         </li>
                         <li>
-                            <a href="#">Link</a>
+                            <a href="#">เงื่อนไขการใช้งาน</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-auto">
-                    <h5>Heading</h5>
-                    <ul class="list-inline">
+                    <h5 class="mb-4">สอบถามและติดตามเราได้ที่</h5>
+                    <ul class="list-inline mb-4">
                         <li class="list-inline-item">
                             <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-facebook fa-2x"></i>
+                                <i class="fab fa-facebook-f fa-3x"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-line fa-2x"></i>
+                                <i class="fab fa-line fa-3x"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-instagram fa-2x"></i>
+                                <i class="fab fa-instagram fa-3x"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-twitter fa-2x"></i>
+                                <i class="fab fa-twitter fa-3x"></i>
                             </a>
                         </li>
                     </ul>
                     <ul class="list-unstyled">
                         <li>
-                            Tel: <a href="tel:+66123456789">0123456789</a>
+                            โทร: <a href="tel:+66962456963">096-245-6963</a>
                         </li>
                         <li>
-                            Email: <a href="tel:+66123456789">example@mail.com</a>
+                            Email: <a href="mailto:learnmaru@gmail.com">learnmaru@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -632,11 +739,38 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.0/jarallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
     <script>
+        window.onscroll = function () {
+            headerSticky()
+        };
+
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function headerSticky() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <script>
         $(function () {
+            // Initial Jarallax
+            $('.jarallax').jarallax({
+                speed: 0.5
+            });
+
+            // Initial Bootstrap select
+            $('select').selectpicker();
+
             // Classroom slider
             $('.classroom-slider').slick({
                 arrows: false,

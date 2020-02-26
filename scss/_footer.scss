@@ -1,0 +1,14 @@
+footer {
+    background-color: #3C3A3A;
+    color: white;
+    padding: 4rem 0;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: white;
+            opacity: .8;
+        }
+    }
+}

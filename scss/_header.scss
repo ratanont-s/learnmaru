@@ -4,4 +4,58 @@ header {
     left: 0;
     right: 0;
     z-index: $zindex-sticky;
+    border-bottom: 1px solid #707070;
+
+    .header {
+
+        &-top,
+        &-top a {
+            color: white;
+        }
+
+        &-top {
+            padding: .75rem 0;
+            border-bottom: 1px solid #707070;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+
+            a:hover {
+                opacity: .8;
+            }
+        }
+    }
+
+    .navbar {
+        &-brand {
+            @include media-breakpoint-down(md) {
+                img {
+                    max-height: 40px;
+                }
+            }
+        }
+
+        &-toggler {
+            color: white;
+        }
+    }
+
+    .nav {
+        &-link {
+            font-size: 1.25rem;
+            color: white;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    // Sticky
+    &.sticky {
+        background-color: rgba(black, .5);
+        backdrop-filter: blur(1rem);
+        box-shadow: $box-shadow;
+    }
 }

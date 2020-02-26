@@ -1,9 +1,12 @@
 section {
+
+    // Banner
     &#banner {
-        min-height: 100vh;
+        min-height: calc(100vh + (126px / 2));
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        background-attachment: fixed;
         display: flex;
         align-items: center;
         color: white;
@@ -16,11 +19,143 @@ section {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(white, .5);
+            background-color: rgba(white, .17);
         }
 
         >.container {
             position: relative;
+        }
+
+        h1 {
+            @include font-size(60px);
+        }
+
+        p {
+            @include font-size(20px);
+        }
+    }
+
+    // About
+    &#about {
+        padding-bottom: 4rem;
+
+        .form-search {
+            margin-top: calc(-126px / 2);
+            margin-bottom: 5rem;
+        }
+
+        h5 {
+            @include font-size(40px);
+        }
+    }
+
+    // Classroom
+    &#classroom {
+        background-color: #E1E1E1;
+        padding: 4rem 0;
+
+        h4 {
+            @include font-size(40px);
+            margin-bottom: 1.5rem;
+        }
+
+        .classroom {
+            &-slider {
+                &-item {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    // Feature
+    &#feature {
+        padding: 4rem 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        color: white;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(black, .4);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8rem;
+            background-color: white;
+            z-index: 0;
+        }
+
+        >.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        h5 {
+            @include font-size(40px);
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            @include font-size(50px);
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // Registration
+    &#registration {
+        padding: 4rem;
+
+        h5 {
+            @include font-size(40px);
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // Article
+    &#article {
+        padding-top: 4rem;
+
+        h5 {
+            @include font-size(40px);
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // Guarantee
+    &#guarantee {
+        padding: 4rem 0;
+        background-color: #85C5F5;
+
+        h4 {
+            @include font-size(40px);
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    // Join us
+    &#joinUs {
+        background-color: $primary;
+        color: white;
+        padding: 3rem 0;
+
+        h5 {
+            @include font-size(40px);
+        }
+
+        p {
+            @include font-size(20px);
         }
     }
 }
