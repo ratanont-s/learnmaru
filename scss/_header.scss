@@ -29,10 +29,13 @@ header {
 
     .navbar {
         &-brand {
-            @include media-breakpoint-down(md) {
-                img {
-                    max-height: 40px;
-                }
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+
+            img {
+                margin-right: 0.5rem;
             }
         }
 
@@ -57,5 +60,58 @@ header {
         background-color: rgba(black, .5);
         backdrop-filter: blur(1rem);
         box-shadow: $box-shadow;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .navbar {
+            &-brand {
+                @include font-size(35px);
+
+                img {
+                    margin-right: 0.75rem;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .navbar {
+            &-brand {
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        .offcanvas-collapse {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 100%;
+            width: 100%;
+            padding: 1rem;
+            overflow-y: auto;
+            visibility: hidden;
+            background-color: rgba(#5EB3F3, .9);
+            transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+            transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+            transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+            text-align: center;
+            color: white;
+
+            h5 {
+                font-size: 34px;
+            }
+
+            .nav-link {
+                font-size: 24px;
+            }
+
+            &.open {
+                visibility: visible;
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
     }
 }

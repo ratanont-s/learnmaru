@@ -8,9 +8,9 @@ section {
         background-size: cover;
         background-attachment: fixed;
         display: flex;
-        align-items: center;
         color: white;
         position: relative;
+        padding: 6rem 0;
 
         &::before {
             content: '';
@@ -27,11 +27,33 @@ section {
         }
 
         h1 {
-            @include font-size(60px);
+            font-size: 27px;
         }
 
         p {
-            @include font-size(20px);
+            font-size: 13px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            align-items: center;
+
+
+            h1 {
+                @include font-size(60px);
+            }
+
+            p {
+                @include font-size(20px);
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+
+            >.container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
         }
     }
 
@@ -44,8 +66,23 @@ section {
             margin-bottom: 5rem;
         }
 
-        h5 {
-            @include font-size(40px);
+
+        @include media-breakpoint-up(lg) {
+            h5 {
+                @include font-size(40px);
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            .form-search {
+                margin-left: -15px;
+                margin-right: -15px;
+                margin-bottom: 4rem;
+
+                &::before {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -54,15 +91,37 @@ section {
         background-color: #E1E1E1;
         padding: 4rem 0;
 
-        h4 {
-            @include font-size(40px);
-            margin-bottom: 1.5rem;
-        }
+
 
         .classroom {
             &-slider {
                 &-item {
                     padding: 1rem;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            h4 {
+                @include font-size(40px);
+            }
+
+            .card-classroom {
+                &-hilight {
+                    .card {
+                        &-body {
+                            margin: -1rem 1rem 1rem;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            .card-classroom {
+                .card-link {
+                    display: none;
                 }
             }
         }
@@ -86,16 +145,6 @@ section {
             background-color: rgba(black, .4);
         }
 
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 8rem;
-            background-color: white;
-            z-index: 0;
-        }
 
         >.container {
             position: relative;
@@ -103,23 +152,44 @@ section {
         }
 
         h5 {
-            @include font-size(40px);
-            margin-bottom: 1.5rem;
+            font-size: 24px;
         }
 
         h4 {
             @include font-size(50px);
             margin-bottom: 1.5rem;
         }
+
+        @include media-breakpoint-up(lg) {
+            h5 {
+                @include font-size(40px);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 8rem;
+                background-color: white;
+                z-index: 0;
+            }
+        }
     }
 
     // Registration
     &#registration {
-        padding: 4rem;
+        padding: 4rem 0;
 
         h5 {
-            @include font-size(40px);
-            margin-bottom: 1.5rem;
+            font-size: 24px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            h5 {
+                @include font-size(40px);
+            }
         }
     }
 
@@ -127,9 +197,57 @@ section {
     &#article {
         padding-top: 4rem;
 
-        h5 {
-            @include font-size(40px);
-            margin-bottom: 1.5rem;
+        h4 {
+            font-style: 24px;
+        }
+
+        .slick-list {
+            padding: 0 !important;
+        }
+
+        @include media-breakpoint-up(lg) {
+            h4 {
+                @include font-size(40px);
+            }
+
+            .slick-slide {
+                >div {
+                    display: flex;
+                }
+            }
+
+            .article {
+                &-slider {
+                    &-item {
+                        height: 100%;
+
+                    }
+                }
+            }
+
+            .card-article {
+                .card {
+                    &-img {
+                        height: 350px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            .card-article {
+                .card {
+                    &-img {
+                        height: 200px;
+                        object-fit: cover;
+                    }
+
+                    &-title {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
 
@@ -139,8 +257,13 @@ section {
         background-color: #85C5F5;
 
         h4 {
-            @include font-size(40px);
-            margin-bottom: 2.5rem;
+            font-size: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            h4 {
+                @include font-size(40px);
+            }
         }
     }
 
@@ -151,11 +274,17 @@ section {
         padding: 3rem 0;
 
         h5 {
-            @include font-size(40px);
+            font-size: 30px;
         }
 
         p {
             @include font-size(20px);
+        }
+
+        @include media-breakpoint-up(lg) {
+            h5 {
+                @include font-size(40px);
+            }
         }
     }
 }

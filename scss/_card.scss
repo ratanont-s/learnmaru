@@ -4,9 +4,12 @@
     border-radius: 0;
     box-shadow: $box-shadow-sm;
     margin-bottom: 10px;
+    color: $body-color;
 
     &:hover {
+        color: $body-color;
         box-shadow: $box-shadow;
+        background-color: $light;
 
         .card-body {
             box-shadow: $box-shadow;
@@ -17,6 +20,7 @@
         &-img {
             border-radius: 0;
             border: 1px solid #707070;
+            object-fit: cover;
         }
 
         &-body {
@@ -68,6 +72,33 @@
             &-body {
                 margin: 1rem 1rem 1rem -4rem;
                 height: calc(100% - 2rem);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .card-name {
+            margin: 1.25rem 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .card {
+            &-title {
+                font-size: 16px;
+            }
+
+            &-detail {
+                padding: 0.5rem;
+            }
+
+            &-time {
+                flex-direction: column;
+                padding: 0.5rem;
+
+                i {
+                    font-size: 2rem;
+                }
             }
         }
     }
