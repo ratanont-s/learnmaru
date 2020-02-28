@@ -10,7 +10,7 @@ section {
         display: flex;
         color: white;
         position: relative;
-        padding: 6rem 0;
+        padding: 12vh 0 22vh;
 
         &::before {
             content: '';
@@ -35,7 +35,8 @@ section {
         }
 
         @include media-breakpoint-up(lg) {
-            align-items: center;
+            align-items: flex-end;
+            padding-bottom: 22vh;
 
 
             h1 {
@@ -160,6 +161,29 @@ section {
             margin-bottom: 1.5rem;
         }
 
+        .form-register {
+            .custom-control {
+                padding-left: 2.25rem;
+
+                &-label {
+                    &::before {
+                        top: 0;
+                        left: -2.25rem;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        border-radius: 0;
+                    }
+
+                    &:after {
+                        top: 0;
+                        left: -2.25rem;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+
         @include media-breakpoint-up(lg) {
             h5 {
                 @include font-size(40px);
@@ -201,9 +225,18 @@ section {
             font-style: 24px;
         }
 
-        .slick-list {
-            padding: 0 !important;
+        .slick {
+            &-list {
+                padding: 0 !important;
+            }
+
+            &-slide {
+                >div {
+                    display: flex;
+                }
+            }
         }
+
 
         @include media-breakpoint-up(lg) {
             h4 {
@@ -211,6 +244,7 @@ section {
             }
 
             .slick-slide {
+
                 >div {
                     display: flex;
                 }
@@ -228,7 +262,9 @@ section {
             .card-article {
                 .card {
                     &-img {
-                        height: 350px;
+                        width: auto;
+                        height: 100%;
+                        max-height: 350px;
                         object-fit: cover;
                     }
                 }
@@ -239,7 +275,7 @@ section {
             .card-article {
                 .card {
                     &-img {
-                        height: 200px;
+                        height: 100%;
                         object-fit: cover;
                     }
 

@@ -48,11 +48,6 @@ header {
         &-item {
             &.dropdown {
                 .dropdown {
-                    &-toggle {
-                        &:after {
-                            display: none;
-                        }
-                    }
 
                     &-menu {
                         border-radius: 0;
