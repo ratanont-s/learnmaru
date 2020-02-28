@@ -46,3 +46,15 @@
         position: relative;
     }
 }
+
+// Selectpicker{
+.bootstrap-select {
+    .dropdown {
+        &-menu {
+            border-width: 0;
+            border-radius: 0;
+            margin-top: 0;
+            box-shadow: $box-shadow;
+        }
+    }
+}

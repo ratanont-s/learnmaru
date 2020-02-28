@@ -7,3 +7,16 @@
 @import './card';
 @import './list';
 @import './footer';
+
+html,
+body {
+    position: relative;
+}
+
+body {
+    &.open-offcanvas {
+        @include media-breakpoint-down(md) {
+            overflow: hidden;
+        }
+    }
+}
