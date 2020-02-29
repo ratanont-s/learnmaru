@@ -50,8 +50,18 @@ header {
                 .dropdown {
 
                     &-menu {
+                        background-color: transparent;
                         border-radius: 0;
+                        border-color: #707070;
                         box-shadow: $box-shadow;
+                    }
+
+                    &-item {
+                        color: white;
+
+                        &:hover {
+                            background-color: rgba(white, .25);
+                        }
                     }
                 }
             }
@@ -72,6 +82,18 @@ header {
         background-color: rgba(black, .5);
         backdrop-filter: blur(1rem);
         box-shadow: $box-shadow;
+
+        .nav-item {
+
+            .dropdown {
+                &-menu {
+                    @include media-breakpoint-up(lg) {
+                        background-color: rgba(black, .5);
+                        backdrop-filter: blur(1rem);
+                    }
+                }
+            }
+        }
     }
 
     @include media-breakpoint-up(lg) {
@@ -84,6 +106,16 @@ header {
                 }
             }
         }
+
+        .nav {
+            &-item {
+                &.dropdown {
+                    .dropdown-menu {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
     }
 
     @include media-breakpoint-down(md) {
@@ -91,6 +123,31 @@ header {
             &-brand {
                 img {
                     display: none;
+                }
+            }
+        }
+
+        .nav {
+            &-item {
+                &.dropdown {
+                    .dropdown {
+                        &-toggle {
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        &-menu {
+                            border-color: white;
+                            box-shadow: none;
+                            max-width: 200px;
+                            margin: 0 auto;
+                        }
+
+                        &-item {
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
